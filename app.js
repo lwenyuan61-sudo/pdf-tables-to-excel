@@ -4,7 +4,7 @@
 import * as pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.min.mjs';
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.worker.min.mjs';
 
-const DONATE_URL = '';                       // Ko-fi / GitHub Sponsors link; button stays hidden while empty
+const DONATE_URL = 'https://ko-fi.com/wenyuanli';                     // Ko-fi / GitHub Sponsors link; button stays hidden while empty
 const CELL_GAP = 0.6;                        // gap wider than 0.6 × text height starts a new cell
 const ROW_TOL = 0.45;                        // baselines closer than 0.45 × text height are one row
 const OCR_SCALE = 3;                         // render scanned pages at 3 × 72 = 216 dpi
