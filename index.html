@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PDF to Excel — free, private table converter</title>
 <meta name="description" content="Convert PDF tables to Excel (.xlsx) or CSV for free. Works on scanned PDFs too. Runs entirely in your browser — your files are never uploaded.">
+<link rel="canonical" href="https://lwenyuan61-sudo.github.io/pdf-tables-to-excel/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PDF to Excel — free, private table converter">
+<meta property="og:description" content="Turn the tables in any PDF (scanned ones too) into an Excel file. Runs in your browser; files are never uploaded.">
+<meta property="og:url" content="https://lwenyuan61-sudo.github.io/pdf-tables-to-excel/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"PDF to Excel","url":"https://lwenyuan61-sudo.github.io/pdf-tables-to-excel/","applicationCategory":"BusinessApplication","operatingSystem":"Any (web browser)","description":"Free converter that turns PDF tables, including scanned PDFs, into Excel (.xlsx) or CSV, entirely in the browser.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Wenyuan Li"}}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23217346'/%3E%3Cpath d='M8 9h16M8 16h16M8 23h16M14 6v20' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 :root{color-scheme:light;--bg:#f7f7f5;--card:#fff;--ink:#1d1d1b;--mute:#6b6b66;--line:#e3e2dd;--acc:#217346;--acc-ink:#fff;--soft:#eef5f0;--warn:#9a5b00}
@@ -38,6 +45,10 @@ table{border-collapse:collapse;font-size:13px;width:max-content;min-width:100%}
 td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:5px 9px;white-space:nowrap;max-width:340px;overflow:hidden;text-overflow:ellipsis}
 td.n{text-align:right;font-variant-numeric:tabular-nums}
 .note{font-size:13px;color:var(--mute);margin-top:10px}
+.faq{margin-top:48px}
+.faq h2{font-size:20px;margin:0 0 6px}
+.faq h3{font-size:15px;margin:18px 0 2px}
+.faq p{margin:0;color:var(--mute);font-size:15px}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;font-size:14px;color:var(--mute)}
 footer a{color:inherit}
 .donate{display:none;align-items:center;gap:8px;text-decoration:none;color:var(--ink)!important;border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:var(--card)}
@@ -81,6 +92,18 @@ footer a{color:inherit}
     </div>
     <div class="wrap"><table id="prev"></table></div>
     <div class="note" id="note"></div>
+  </section>
+
+  <section class="faq">
+    <h2>Questions</h2>
+    <h3>Is it really free?</h3>
+    <p>Yes. No sign-up, no page limit, no watermark.</p>
+    <h3>Are my files uploaded?</h3>
+    <p>No. The PDF is read by your own browser and the Excel file is made on your computer. Nothing is sent to a server, so it is safe for bank statements, invoices and other private documents.</p>
+    <h3>Does it work on scanned PDFs?</h3>
+    <p>Yes. Pages without a text layer are read with built-in text recognition (English, Chinese, French, German, Spanish). Check the numbers on scanned pages; recognition can misread a character.</p>
+    <h3>What about numbers?</h3>
+    <p>Numbers become real Excel numbers, keeping thousands separators, currency signs, percentages and negatives in brackets. Codes with leading zeros, like 00123, stay as text.</p>
   </section>
 
   <footer>
