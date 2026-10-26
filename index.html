@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PDF to Excel — free, private table converter</title>
-<meta name="description" content="Convert PDF tables to Excel (.xlsx) or CSV for free. Works on scanned PDFs too. Runs entirely in your browser — your files are never uploaded.">
+<title>Scanned PDF &amp; Image to Excel — free, no upload</title>
+<meta name="description" content="Free: turn tables in PDFs, scanned PDFs, photos and screenshots into Excel (.xlsx) or CSV. Keeps merged cells. English, Chinese, Japanese, Korean. Runs in your browser — files are never uploaded.">
 <link rel="canonical" href="https://lwenyuan61-sudo.github.io/pdf-tables-to-excel/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PDF to Excel — free, private table converter">
-<meta property="og:description" content="Turn the tables in any PDF (scanned ones too) into an Excel file. Runs in your browser; files are never uploaded.">
+<meta property="og:title" content="Scanned PDF &amp; Image to Excel — free, no upload">
+<meta property="og:description" content="Tables in PDFs, scans, photos and screenshots → Excel. Keeps merged cells. Runs in your browser; files are never uploaded.">
 <meta property="og:url" content="https://lwenyuan61-sudo.github.io/pdf-tables-to-excel/">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"PDF to Excel","url":"https://lwenyuan61-sudo.github.io/pdf-tables-to-excel/","applicationCategory":"BusinessApplication","operatingSystem":"Any (web browser)","description":"Free converter that turns PDF tables, including scanned PDFs, into Excel (.xlsx) or CSV, entirely in the browser.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Wenyuan Li"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Scanned PDF & Image to Excel","url":"https://lwenyuan61-sudo.github.io/pdf-tables-to-excel/","applicationCategory":"BusinessApplication","operatingSystem":"Any (web browser)","description":"Free converter that turns tables in PDFs, scanned PDFs, photos and screenshots into Excel (.xlsx) or CSV, entirely in the browser.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Wenyuan Li"}}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23217346'/%3E%3Cpath d='M8 9h16M8 16h16M8 23h16M14 6v20' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 :root{color-scheme:light;--bg:#f7f7f5;--card:#fff;--ink:#1d1d1b;--mute:#6b6b66;--line:#e3e2dd;--acc:#217346;--acc-ink:#fff;--soft:#eef5f0;--warn:#9a5b00}
@@ -58,24 +58,26 @@ footer a{color:inherit}
 </head>
 <body>
 <main>
-  <h1>PDF to Excel</h1>
-  <p class="sub">Free. Turns the tables in your PDF into an Excel file. Scanned PDFs work too. Everything runs in your browser — your files are never uploaded.</p>
+  <h1>PDF &amp; image tables to Excel</h1>
+  <p class="sub">Free. Works on PDFs, scanned PDFs, photos and screenshots of tables, and keeps merged cells. Everything runs in your browser — your files are never uploaded.</p>
 
   <label class="drop" id="drop" tabindex="0">
-    <b>Drop PDF files here</b>
-    <span>or click to choose</span>
-    <input type="file" id="file" accept="application/pdf,.pdf" multiple>
+    <b>Drop PDFs or images here</b>
+    <span>or click to choose — or paste a screenshot (Ctrl+V)</span>
+    <input type="file" id="file" accept="application/pdf,.pdf,image/*" multiple>
   </label>
 
   <div class="opts">
     <label><input type="radio" name="mode" value="page" checked> One sheet per page</label>
     <label><input type="radio" name="mode" value="all"> All pages in one sheet</label>
     <label><input type="checkbox" id="num" checked> Convert numbers</label>
-    <label>Scanned pages:
+    <label>Text recognition:
       <select id="lang">
         <option value="eng">English</option>
         <option value="eng+chi_sim">English + 简体中文</option>
         <option value="eng+chi_tra">English + 繁體中文</option>
+        <option value="eng+jpn">English + 日本語</option>
+        <option value="eng+kor">English + 한국어</option>
         <option value="eng+fra+deu+spa">English + FR / DE / ES</option>
       </select>
     </label>
@@ -101,7 +103,11 @@ footer a{color:inherit}
     <h3>Are my files uploaded?</h3>
     <p>No. The PDF is read by your own browser and the Excel file is made on your computer. Nothing is sent to a server, so it is safe for bank statements, invoices and other private documents.</p>
     <h3>Does it work on scanned PDFs?</h3>
-    <p>Yes. Pages without a text layer are read with built-in text recognition (English, Chinese, French, German, Spanish). Check the numbers on scanned pages; recognition can misread a character.</p>
+    <p>Yes. Pages without a text layer are read with built-in text recognition (English, Simplified and Traditional Chinese, Japanese, Korean, French, German, Spanish). Check the numbers on scanned pages; recognition can misread a character.</p>
+    <h3>Can I convert a photo or a screenshot of a table?</h3>
+    <p>Yes. Drop a PNG or JPG, or just press Ctrl+V to paste a screenshot. Straight, well-lit photos work best.</p>
+    <h3>Does it keep merged cells and cells with several lines?</h3>
+    <p>Yes, for tables drawn with lines: merged cells become merged cells in Excel, and text that wraps inside a cell stays in one cell.</p>
     <h3>What about numbers?</h3>
     <p>Numbers become real Excel numbers, keeping thousands separators, currency signs, percentages and negatives in brackets. Codes with leading zeros, like 00123, stay as text.</p>
   </section>
